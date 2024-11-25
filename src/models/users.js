@@ -9,10 +9,8 @@ const userModel = {
             body:JSON.stringify(newUser),
             headers:{'Content-Type':'application/json'}
         })
-
         console.log(peticion);
         const data = await peticion.json()
-        
         return data
     },
 
@@ -22,7 +20,9 @@ const userModel = {
         const users = await response.json()
 
         const user = users.find(user => user.username === username)
-        if (!user){
+        if (!user || !password){
+            return {error: "Usuario o contraseña incorrectos"}
+        } else if (user == null || password == null){
             return {error: "Usuario o contraseña incorrectos"}
         }
         const passwordMatch = await bcrypt.compare(password, user.password)
@@ -58,9 +58,9 @@ const userModel = {
 
     async updateUser(idUser, updatedUser){
         try {
-            const url = `http://localhost:4000/complaints/${idUser}`
+            const url = `http://localhost:4000/users/${idUser}`
             const peticion = await fetch(url,{
-                method:'PATCH',
+                method:'PUT',
                 body:JSON.stringify(updatedUser),
                 headers:{'Content-Type':'application/json'},
             });
@@ -73,7 +73,7 @@ const userModel = {
 
     async deleteUser(idUser){
         try {
-            const url = `http://localhost:4000/complaints/${idUser}`
+            const url = `http://localhost:4000/users/${idUser}`
             const peticion = await fetch(url,{
                 method:'DELETE'
             });
