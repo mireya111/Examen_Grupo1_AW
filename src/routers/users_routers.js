@@ -11,5 +11,4 @@ router.get('/users/:id', verifyToken, oneUserController);
 router.get('/users/:id', verifyToken, updateComplaintController);
 router.get('/users/:id', verifyToken, deleteUserController); 
 
-
 export default router
