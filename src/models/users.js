@@ -56,7 +56,33 @@ const userModel = {
         }
     },
 
+    async updateUser(idUser, updatedUser){
+        try {
+            const url = `http://localhost:4000/complaints/${idUser}`
+            const peticion = await fetch(url,{
+                method:'PATCH',
+                body:JSON.stringify(updatedUser),
+                headers:{'Content-Type':'application/json'},
+            });
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    },
 
+    async deleteUser(idUser){
+        try {
+            const url = `http://localhost:4000/complaints/${idUser}`
+            const peticion = await fetch(url,{
+                method:'DELETE'
+            });
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    }
 }
 
 export default userModel

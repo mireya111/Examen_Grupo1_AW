@@ -59,9 +59,32 @@ const oneUserController = async (req, res) => {
     }
 }
 
+const updateUserController = async (req, res) => {
+    const {id} = req.params; 
+    try {
+        const updateUser = await userModel.updateUser(id, req.body); 
+        res.status(200).json(updateUser); 
+    } catch (error){
+        res.status(500).json({message:error});
+    }
+}
+
+const deleteUserController = async (req,res) => {
+    const {id} = req.params
+
+    try {
+        const deleteUser = await userModel.deleteUser(id);
+        res.status(200).json({message:'Se ha eliminado correctamente el usuario'})
+    } catch (error) {
+        res.status(500).json({message:error})
+    }
+}
+
 export{
     registerUserController,
     loginUserController, 
     allUsersController, 
-    oneUserController
+    oneUserController, 
+    updateUserController, 
+    deleteUserController
 }
