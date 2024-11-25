@@ -14,7 +14,6 @@ const complainModel = {
         return data;
     },
 
-
     async getComplaint(){
         try {
             const url = "http://localhost:4000/complaints";
@@ -25,7 +24,6 @@ const complainModel = {
             console.error(error)
         }
     },
-
 
     async findComplaint(idComplaint){
         try {

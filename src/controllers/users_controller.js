@@ -3,9 +3,8 @@ import bcrypt from "bcrypt"
 import userModel from '../models/users.js';
 import { createToken } from '../middlewares/auth.js';
 const saltRounds = 10
-
 const registerUserController = async(req, res)=> {
-
+    
     const { password, ...otherDataUser } = req.body;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     const userData = {
@@ -13,7 +12,6 @@ const registerUserController = async(req, res)=> {
         password: hashedPassword,
         ...otherDataUser
     }
-   
     
     try {
         const user = await userModel.registerUserModel(userData)
@@ -24,6 +22,7 @@ const registerUserController = async(req, res)=> {
         res.status(500).json(error.msg)
     }
 }
+
 
 const loginUserController = async (req, res) => {
     const { username, password } = req.body;
@@ -40,7 +39,29 @@ const loginUserController = async (req, res) => {
     }
 };
 
+const allUsersController = async (req, res) => {
+    try {
+        const allUsers = await userModel.getUsers();
+        res.status(200).json(allUsers);
+    } catch (error) {
+        res.status(500).json({message:error});
+    }
+}
+
+const oneUserController = async (req, res) => {
+    const {id} = req.params;
+    try{
+        const oneUser = await userModel.findUser(id);
+        res.status(200).json(oneUser);
+    } catch (error)
+    {
+        res.status(500).json({message:error});
+    }
+}
+
 export{
     registerUserController,
-    loginUserController
+    loginUserController, 
+    allUsersController, 
+    oneUserController
 }

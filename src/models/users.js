@@ -1,4 +1,5 @@
 import bcrypt from 'bcrypt'
+//Modelo usuarios
 const userModel = {
 
     async registerUserModel (newUser) {
@@ -31,7 +32,31 @@ const userModel = {
             return {error: "Usuario o contraseña incorrectos"}
         }
 
-    }
+    }, 
+
+    async getUsers(){
+        try {
+            const url = "http://localhost:4000/users";
+            const peticion = await fetch(url);
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+    async findUser(idUser){
+        try {
+            const url = `http://localhost:4000/users/${idUser}`
+            const peticion = await fetch(url);
+            const data = await peticion.json();
+            return data;
+        } catch (error) {
+            console.error(error)
+        }
+    },
+
+
 }
 
 export default userModel
