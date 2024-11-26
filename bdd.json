@@ -29,13 +29,6 @@
       "email": "mathias@epn.edu.ec"
     },
     {
-      "id": "427fc255-36d5-48c8-afac-b401bab59415",
-      "password": "$2b$10$IH9N2vCkW7CmJspoDq3JtOdUHawgp2pZGV6ZVXqQRo61QqRAZ0J5m",
-      "email": "mire@gmail.com",
-      "username": "Mire",
-      "rol": "Usuario"
-    },
-    {
       "id": "937b14aa-0fb2-4b6e-9f88-39d7d7afdbaf",
       "password": "$2b$10$to7QUHVUBmS7.ACR7phZXOGF7.fRQUwq3dpTf3MGbrTOzjj/Ukga6",
       "email": "mire@gmail.com",
@@ -104,6 +97,13 @@
       "email": "manueldfgsag@epn.edu.ec",
       "username": "manuel123",
       "rol": "denunciante"
+    },
+    {
+      "id": "59a5c9eb-ac17-4541-aa6e-3e548fa7cdcd",
+      "email": "mateo@g.com",
+      "username": "Mateor12",
+      "rol": "administrador",
+      "password": "$2b$10$j/zDyVM9mCsfhXYVor5/S./ApI1XdEBvNnoX5nZW1/NOA1gAUYwd2"
     }
   ],
   "complaints": [
@@ -138,6 +138,14 @@
       "hora": "08:00h",
       "tipo": "Robo",
       "perdida_pertenencias": "No"
+    },
+    {
+      "id": "a58cf2ed-d4e7-4020-9f6e-c132b1577e46",
+      "barrio": "Altar",
+      "username": "Dilan13",
+      "hora": "09h00",
+      "tipo": "Hurto",
+      "perdida_pertenencias": "Si"
     }
   ]
 }

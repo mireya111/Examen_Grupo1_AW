@@ -12,8 +12,8 @@ const registerComplaintController = async (req, res) =>{
 
     try {
         const complaint = await complainModel.registerComplaint(complaintData);
-        console.log(complaint);
-        res.status(200).json({message:"Denuncia registrada con éxito."});
+        const {id} = complaint;
+        res.status(200).json({message:"Denuncia registrada con éxito.", id});
         
     } catch (error) {
         res.status(500).json(error.msg);
@@ -36,6 +36,9 @@ const findComplaintController = async (req,res) => {
 
     try {
         const complaint = await complainModel.findComplaint(id)
+        if (complaint.error) {
+            return res.status(404).json({error: complaint.error})
+        }
         res.status(200).json(complaint)
     } catch (error) {
         res.status(500).json({message:error})

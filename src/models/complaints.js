@@ -33,6 +33,7 @@ const complainModel = {
             return data;
         } catch (error) {
             console.error(error)
+            return {error: "No se encontró la denuncia"}
         }
     },
 

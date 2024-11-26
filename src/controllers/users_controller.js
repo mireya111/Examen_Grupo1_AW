@@ -46,7 +46,7 @@ const loginUserController = async (req, res) => {
     try {
         const user = await userModel.loginUserModel(username, password);
         if (user.error) {
-            return res.status(401).json({ error: user.error });
+            return res.status(404).json({ error: user.error });
         }
         delete user.password;
         const token = createToken(user);
@@ -88,10 +88,14 @@ const oneUserController = async (req, res) => {
 
 const updateUserController = async (req,res) => {
     const {id} = req.params
-
+    const {password, ...otherData} = req.body
+    if(password){
+        const hashedPassword = await bcrypt.hash(password, saltRounds)
+        otherData.password = hashedPassword
+    }
     const orderData={
         id,
-        ...req.body
+        ...otherData
     }
     
     try {
