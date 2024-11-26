@@ -2,7 +2,7 @@ import { Router } from "express";
 import { deleteComplaintController, findComplaintController, getComplaintController, registerComplaintController, updateComplaintController, updateComplaintTotallyController } from "../controllers/complaints_controller.js";
 import { verifyToken } from "../middlewares/auth.js";
 const router = Router();
-
+//Rutas privadas: denuncias
 router.post('/complaints/register', verifyToken, registerComplaintController);
 router.get('/complaints',verifyToken,getComplaintController)
 router.get('/complaints/:id',verifyToken,findComplaintController)
