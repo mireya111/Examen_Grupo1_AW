@@ -76,6 +76,9 @@ const oneUserController = async (req, res) => {
     if(rol == "administrador" || rol == "admin"){
         try{
             const oneUser = await userModel.findUser(id);
+            if (oneUser.error){
+                return res.status(404).json({error: oneUser.error});
+            }
             res.status(200).json(oneUser);
         } catch (error)
         {

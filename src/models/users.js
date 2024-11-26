@@ -64,6 +64,7 @@ const userModel = {
             return data;
         } catch (error) {
             console.error(error)
+            return {error: "No se encontró el usuario"}
         }
     },
 
