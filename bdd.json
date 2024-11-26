@@ -27,6 +27,83 @@
       "name": "Mathias",
       "username": "MT",
       "email": "mathias@epn.edu.ec"
+    },
+    {
+      "id": "427fc255-36d5-48c8-afac-b401bab59415",
+      "password": "$2b$10$IH9N2vCkW7CmJspoDq3JtOdUHawgp2pZGV6ZVXqQRo61QqRAZ0J5m",
+      "email": "mire@gmail.com",
+      "username": "Mire",
+      "rol": "Usuario"
+    },
+    {
+      "id": "937b14aa-0fb2-4b6e-9f88-39d7d7afdbaf",
+      "password": "$2b$10$to7QUHVUBmS7.ACR7phZXOGF7.fRQUwq3dpTf3MGbrTOzjj/Ukga6",
+      "email": "mire@gmail.com",
+      "username": "mire",
+      "rol": "denunciante"
+    },
+    {
+      "id": "7034c0f9-d687-429d-8d6b-d4bfc4e79bd1",
+      "password": "$2b$10$9bOEnxDcDmlwdpJ8ynfgJuU0ZqHFsXbI1gmh.lgHXJbE6TIz88Hu6",
+      "email": "mire@gmail.com",
+      "username": "mire",
+      "rol": "denunciante"
+    },
+    {
+      "id": "7bd234f0-ed08-48fe-a1fa-8573201703f6",
+      "password": "$2b$10$7GPBAcqh6lD829n/optv3ezhv8.ASJfzEr9Rf1MxtS6TBbUFKg8Ni",
+      "email": "mire@outlook.com",
+      "username": "mire",
+      "rol": "denunciante"
+    },
+    {
+      "id": "768ba8e0-3231-4809-a36a-e15d9f5a5f48",
+      "password": "$2b$10$Kj3NZ90.9QaxN4jX/76Xn.gy8qT3XC.HLYweUDehw4uTrjGmbK4UC",
+      "email": "yas@epn.edu.ec",
+      "username": "yas",
+      "rol": "denunciante"
+    },
+    {
+      "id": "0b3b3ffc-e28b-40b7-9701-8fac07dcee97",
+      "password": "$2b$10$n9OoVdBJb3N3mAAScLv02elIKoj4QN1BNs5C.peqcIV3Q8SYeQ6L.",
+      "email": "lucia@epn.edu.ec",
+      "username": "yas",
+      "rol": "admin"
+    },
+    {
+      "id": "e82f75a8-bd25-4202-a654-fe2fe40eb544",
+      "password": "$2b$10$he4VGODWVuyFrUHxq9hK6eHBwV0Zxv/yQYKow1SPbuERloDmSgxqO",
+      "email": "maria@epn.edu.ec",
+      "username": "maria",
+      "rol": "admin"
+    },
+    {
+      "id": "20207599-1526-4444-809c-c19667203932",
+      "password": "$2b$10$KyhvOgZ74uQ2AxQd4RAMBOfz.7gGCvlmxCjmwnDVuM7J5S7iABBJe",
+      "email": "manuel@epn.edu.ec",
+      "username": "manuel",
+      "rol": "denunciante"
+    },
+    {
+      "id": "ea309e44-bd6d-433e-b3e6-279a7b237b76",
+      "password": "$2b$10$ns1Y1Ubev8JDjycoCBKVq.lRxjOiHVZaWxRkFFddAiuPUXKNvqUvC",
+      "email": "manuel@epn.edu.ec",
+      "username": "manuel",
+      "rol": "denunciante"
+    },
+    {
+      "id": "fa59e20c-b9be-4484-97ca-9105b34f0ffd",
+      "password": "$2b$10$4fygQV.tsFUMW8KrTcqfbuptw/LYqv72v5TPz7mExX5uMOz40yvIq",
+      "email": "manuel@epn.edu.ec",
+      "username": "manuel12",
+      "rol": "denunciante"
+    },
+    {
+      "id": "27d7d3f8-049c-4037-888a-f352e898c8be",
+      "password": "$2b$10$2e7zgaTxsTJ8iEyMRJTPc.LEN7e5okBbgemZyM6KvNtzjHRjYYY8u",
+      "email": "manueldfgsag@epn.edu.ec",
+      "username": "manuel123",
+      "rol": "denunciante"
     }
   ],
   "complaints": [
