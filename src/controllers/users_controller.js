@@ -14,11 +14,11 @@ const registerUserController = async(req, res)=> {
     }
 
     if( !validEmail.test(email)){
-		res.status(500).json({error: "Email no valido "});
+		res.status(422).json({error: "Email no valido "});
 	}
 
     if (password.length < 6){
-        res.status(500).json({error: "Contraseña con digitos menores a 6, deben ser mayores a este número"});
+        res.status(422).json({error: "Contraseña con digitos menores a 6, deben ser mayores a este número"});
     }
     
     const hashedPassword = await bcrypt.hash(password, saltRounds);
