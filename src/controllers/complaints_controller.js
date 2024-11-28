@@ -1,6 +1,6 @@
 //Importación de librerias
 import {v2 as cloudinary} from 'cloudinary';
-import fs from 'fs-extra';
+import {promises as fs} from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 
 //Importación de modelos
@@ -28,7 +28,8 @@ const registerComplaintController = async (req, res) =>{
         await fs.unlink(req.files.imagen.tempFilePath);
 
     } catch (error) {
-        res.status(500).json(error.msg);
+        console.log(error)
+        res.status(500).json(error.message);
     }
 }
 
