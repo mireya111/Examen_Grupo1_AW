@@ -25,7 +25,7 @@ const registerComplaintController = async (req, res) =>{
         const {id} = complaint;
         res.status(200).json({message:"Denuncia registrada con éxito.", id});
         
-        fs.unlink(req.files.imagen.tempFilePath);
+        await fs.unlink(req.files.imagen.tempFilePath);
 
     } catch (error) {
         res.status(500).json(error.msg);

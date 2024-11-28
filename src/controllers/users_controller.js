@@ -10,7 +10,7 @@ const registerUserController = async(req, res)=> {
 	var validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
 	if (!password || !email || !username || !rol || password.trim() === "" || email.trim() === "" || username.trim() === "" || rol.trim() === "" ) {
-        return res.status(400).json({error: "Datos vacíos, llénelos por favor" });
+        return res.status(422).json({error: "Datos vacíos, llénelos por favor" });
     }
 
     if( !validEmail.test(email)){
