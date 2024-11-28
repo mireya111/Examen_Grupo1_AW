@@ -104,6 +104,20 @@
       "username": "Mateor12",
       "rol": "administrador",
       "password": "$2b$10$j/zDyVM9mCsfhXYVor5/S./ApI1XdEBvNnoX5nZW1/NOA1gAUYwd2"
+    },
+    {
+      "id": "b4d9b9d1-dd62-42ee-b767-f451e96ee8c6",
+      "password": "$2b$10$QAvIS1gnJSk0mRs36T.0Bu9bW0T/BBx1QLGqvMctBiCtDtfwj61o2",
+      "email": "ma@epn.edu.ec",
+      "username": "marta02",
+      "rol": "administracion"
+    },
+    {
+      "id": "6233958a-4bea-4d63-b982-d6f94ff76f6c",
+      "password": "$2b$10$XGiIXg6kqOB/0v15K5EQ9OKmhy/iJ4nQCWyL6kuBribadPWDP18by",
+      "email": "malena@epn.edu.ec",
+      "username": "Malena023",
+      "rol": "administracion"
     }
   ],
   "complaints": [
