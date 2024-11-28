@@ -10,7 +10,7 @@ router.post('/users/login', loginUserController);
 //Rutas privadas: usuarios
 router.get('/users', verifyToken, allUsersController); 
 router.get('/users/:id', verifyToken, oneUserController); 
-router.put('/users/:id', verifyToken, updateUserController);
+router.patch('/users/:id', verifyToken, updateUserController);
 router.delete('/users/:id', verifyToken, deleteUserController); 
 
 export default router

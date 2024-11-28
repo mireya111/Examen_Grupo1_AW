@@ -1,9 +1,13 @@
 import bcrypt from 'bcrypt'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 //Modelo usuarios
 const userModel = {
 
     async registerUserModel (newUser) {
-        const url = "http://localhost:4000/users"
+        const url = process.env.DB_USERS
         const response = await fetch(url)
         const users = await response.json()
 
@@ -25,7 +29,7 @@ const userModel = {
     },
 
     async loginUserModel (username, password){
-        const url = "http://localhost:4000/users"
+        const url = process.env.DB_USERS
         const response = await fetch(url)
         const users = await response.json()
 
@@ -47,7 +51,7 @@ const userModel = {
 
     async getUsers(){
         try {
-            const url = "http://localhost:4000/users";
+            const url = process.env.DB_USERS;
             const peticion = await fetch(url);
             const data = await peticion.json();
             return data;
@@ -58,7 +62,7 @@ const userModel = {
 
     async findUser(idUser){
         try {
-            const url = `http://localhost:4000/users/${idUser}`
+            const url = `${process.env.DB_USERS}${idUser}`
             const peticion = await fetch(url);
             const data = await peticion.json();
             return data;
@@ -70,9 +74,9 @@ const userModel = {
 
     async updateUser(idUser, updatedUser){
         try {
-            const url = `http://localhost:4000/users/${idUser}`
+            const url = `${process.env.DB_USERS}${idUser}`
             const peticion = await fetch(url,{
-                method:'PUT',
+                method:'PATCH',
                 body:JSON.stringify(updatedUser),
                 headers:{'Content-Type':'application/json'},
             });
@@ -85,7 +89,7 @@ const userModel = {
 
     async deleteUser(idUser){
         try {
-            const url = `http://localhost:4000/users/${idUser}`
+            const url = `${process.env.DB_USERS}${idUser}`
             const peticion = await fetch(url,{
                 method:'DELETE'
             });

@@ -1,9 +1,9 @@
-//Importe de librerias
+//Importación de librerias
 import {v2 as cloudinary} from 'cloudinary';
 import fs from 'fs-extra';
 import { v4 as uuidv4 } from 'uuid';
 
-//Importe de modelos
+//Importación de modelos
 import complainModel from '../models/complaints.js';
 
 
