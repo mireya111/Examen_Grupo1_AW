@@ -3,8 +3,6 @@ import cloudinary from 'cloudinary';
 import fileUpload from 'express-fileupload';
 import dotenv from 'dotenv';
 import express from 'express'
-import {fileURLToPath} from 'url'
-import path from 'path'
 
 //Requerir Rutas
 import routerUser from './routers/users_routers.js'
@@ -22,12 +20,6 @@ cloudinary.config({
     api_key: process.env.cloud_api_key, 
     api_secret: process.env.cloud_api_secret
 });
-
-
-console.log(path.join(path.dirname(fileURLToPath(import.meta.url)), 'uploads'));
-
-
-
 
 
 app.use(fileUpload({
