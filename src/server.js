@@ -33,7 +33,7 @@ app.use(express.json());
 //RUTAS
 //Ruta principal
 app.get('/', (req, res)=>{
-    res.send("El Servidor del GRUPO 1 en línea...-pruebav1");
+    res.send("El Servidor del GRUPO 1 en línea...");
 });
 
 //Rutas para los usuarios
