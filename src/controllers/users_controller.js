@@ -57,23 +57,17 @@ const loginUserController = async (req, res) => {
 };
 
 const allUsersController = async (req, res) => {
-    const {rol} = req.body;
-    if (rol == "administrador" || rol == "admin"){
         try {
             const allUsers = await userModel.getUsers();
             res.status(200).json(allUsers);
         } catch (error) {
             res.status(500).json({message:error});
         }
-    } else{
-        res.status(401).json({error: "Mostrar a todos los usuarios solo se encuentra permitido para el administrador"});
-    }
+    
 }
 
 const oneUserController = async (req, res) => {
     const {id} = req.params;
-    const {rol} = req.body;
-    if(rol == "administrador" || rol == "admin"){
         try{
             const oneUser = await userModel.findUser(id);
             if (oneUser.error){
@@ -84,9 +78,6 @@ const oneUserController = async (req, res) => {
         {
             res.status(500).json({message:error});
         }
-    } else{
-        res.status(401).json({error: "Mostrar a un usuario en especifico solo se encuentra permitido para el administrador"});
-    }
 }
 
 const updateUserController = async (req,res) => {
@@ -111,17 +102,12 @@ const updateUserController = async (req,res) => {
 
 const deleteUserController = async (req,res) => {
     const {id} = req.params
-    const {rol} = req.body;
-    if(rol == "administrador" || rol == "admin"){
         try {
             const deleteUser = await userModel.deleteUser(id);
             res.status(200).json({message:'Se ha eliminado correctamente el usuario'})
         } catch (error) {
             res.status(500).json({message:error})
         }
-    }else{
-        res.status(401).json({error:"Eliminar a un usuario solo se encuentra permitido para el administrador"})
-    }
 }
 
 export{
