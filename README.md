@@ -14,6 +14,9 @@ Mediante la implementación de diferentes herramientas enfocadas a una tarea ún
 
 Para hacer uso del respositorio instalar los paquetes correspondientes mendiante "npm i", además no olidar agregar credenciales válidas como en el archvio .env.example se muestra.
 
+![image](https://github.com/user-attachments/assets/d9682733-2aa5-45bc-9918-c0819ac6161e)
+
+
 
 
 
